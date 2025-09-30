@@ -29,7 +29,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-slate-950">
+    <section className="py-12 px-6 bg-slate-950">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16">
           <span className="text-red-500 font-semibold text-sm uppercase tracking-wider">Досвід</span>

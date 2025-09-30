@@ -23,7 +23,7 @@ const Projects = () => {
     ];
 
     return (
-        <section className="py-24 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
+        <section className="py-12 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
             <div className="container mx-auto max-w-7xl">
                 <div className="text-center mb-16">
                     <span className="text-red-500 font-semibold text-sm uppercase tracking-wider">Портфоліо</span>
