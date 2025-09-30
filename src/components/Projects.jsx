@@ -10,7 +10,8 @@ const Projects = () => {
             description: "Інформаційна платформа для мережі АЗС з адмінпанеллю",
             tags: ["Vue.js", "Node.js", "Firebase", "Docker"],
             color: "from-blue-500/20 to-cyan-500/20",
-            link: "https://toptar.ua/"
+            link: "https://toptar.ua/",
+            image: "/rhv.png"
         },
         {
             id: 2,
@@ -18,7 +19,8 @@ const Projects = () => {
             description: "Вебсайт для бронювання номерів у пансіонаті",
             tags: ["Vue.js", "Express", "Tailwind"],
             color: "from-purple-500/20 to-pink-500/20",
-            link: "https://retirement-test.netlify.app/home"
+            link: "https://retirement-test.netlify.app/home",
+            image: "/azs.png"
         }
     ];
 
@@ -38,14 +40,23 @@ const Projects = () => {
                             onMouseEnter={() => setActiveProject(project.id)}
                             onMouseLeave={() => setActiveProject(null)}
                         >
-                            <div className="aspect-video overflow-hidden">
-                                <div className={`w-full h-full bg-gradient-to-br ${project.color} flex items-center justify-center transition-transform duration-500 ${activeProject === project.id ? 'scale-110' : 'scale-100'}`}>
-                                    <div className="text-white/50 text-center">
-                                        <Code className="w-16 h-16 mx-auto mb-2" />
-                                        <p className="text-sm">Project Preview</p>
-                                    </div>
+                            <div className="aspect-video overflow-hidden relative">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className={`w-full h-full object-cover transition-transform duration-500 ${activeProject === project.id ? "scale-110" : "scale-100"
+                                        }`}
+                                />
+                                <div
+                                    className={`absolute inset-0 bg-gradient-to-br ${project.color} transition-opacity duration-500 ${activeProject === project.id ? "opacity-60" : "opacity-40"
+                                        }`}
+                                ></div>
+                                <div className="absolute inset-0 flex flex-col items-center justify-center text-white/60">
+                                    <Code className="w-16 h-16 mb-2" />
+                                    <p className="text-sm">Project Preview</p>
                                 </div>
                             </div>
+
 
                             <div className="p-6">
                                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
